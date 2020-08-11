@@ -1,8 +1,12 @@
+# coding=utf-8
+
 import numpy as np
 import os
+import sys 
 
 from keras import models
 from PIL import Image
+
 
 # Se deshabilitan los warnings de Tensorflow.
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
@@ -26,7 +30,7 @@ model = models.load_model('number_hand_gesture_model/')
 
 testing = np.array([])
 
-img = Image.open('test/my_seven_3.jpg').convert('L')
+img = Image.open("test\six_6.jpg").convert('L')
 img = img.resize((100, 100)).rotate(-90)
 testing = np.append(testing, np.array(img))
 
